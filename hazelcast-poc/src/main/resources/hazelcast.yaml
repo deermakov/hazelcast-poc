@@ -1,0 +1,11 @@
+# Embedded mode Hazelcast config. Not used in this PoC.
+
+#hazelcast:
+#  cluster-name: hazelcast-cluster
+#  network:
+#    join:
+#      tcp-ip:
+#        enabled: true
+#        member-list:
+#        - localhost:5701
+#        - localhost:5702

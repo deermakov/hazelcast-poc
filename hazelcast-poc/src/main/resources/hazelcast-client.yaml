@@ -1,0 +1,8 @@
+# Hazelcast client config
+
+hazelcast-client:
+  cluster-name: dev
+  network:
+    cluster-members:
+    - localhost:5701
+    - localhost:5702

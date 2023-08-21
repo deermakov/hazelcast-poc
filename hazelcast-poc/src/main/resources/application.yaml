@@ -1,0 +1,3 @@
+springdoc:
+  packagesToScan: poc.hazelcast.adapter.rest
+  show-actuator: true
