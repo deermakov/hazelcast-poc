@@ -1,7 +1,7 @@
 # Hazelcast client config
 
 hazelcast-client:
-  cluster-name: dev
+  cluster-name: poc_cluster
   network:
     cluster-members:
     - localhost:5701

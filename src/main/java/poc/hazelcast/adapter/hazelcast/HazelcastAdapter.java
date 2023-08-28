@@ -7,19 +7,16 @@ import poc.hazelcast.domain.Party;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
 public class HazelcastAdapter {
-    private static final String DATA_OBJECT_KEY = "data";
+    private static final String DATA_OBJECT_KEY = "parties";
     private final HazelcastInstance hazelcastInstance;
 
-//    private void createDataStorage(){
-//        hazelcastInstance.
-//    }
-
-    public Party getParty(String partyId){
-        return hazelcastInstance.<String, Party>getMap(DATA_OBJECT_KEY).get(partyId);
+    public Optional<Party> getParty(String partyId){
+        return Optional.ofNullable(hazelcastInstance.<String, Party>getMap(DATA_OBJECT_KEY).get(partyId));
     }
 
     public List<Party> getAllParties(){
