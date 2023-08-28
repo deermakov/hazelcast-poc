@@ -33,4 +33,13 @@ http://localhost:8081/swagger-ui/index.html
 }
 ```
 ## Замечания
-1. JSON из запросов сохраняется в Hazelcast как есть, поэтому например Individual из состава IndividualEntrepreneur не сохраняется как отдельный Party
+1. JSON из запросов сохраняется в Hazelcast как есть, поэтому
+например Individual из состава IndividualEntrepreneur не
+сохраняется как отдельный Party.
+2. Важно задавать свойство HZ_NETWORK_PUBLICADDRESS у узлов
+кластера Hazelcast.
+   - это должен быть внешний IP:port адрес docker-контейнера,
+в котором крутится этот узел, напр. в PoC это IP локальной
+машины. Важно: localhost или 127.0.0.1 не подойдут.
+   - этот адрес виден Java-клиенту (см. "Members" в логах), и
+по нему клиент будет ходить к узлам.

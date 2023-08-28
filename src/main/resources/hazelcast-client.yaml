@@ -6,3 +6,4 @@ hazelcast-client:
     cluster-members:
     - localhost:5701
     - localhost:5702
+    - localhost:5703
