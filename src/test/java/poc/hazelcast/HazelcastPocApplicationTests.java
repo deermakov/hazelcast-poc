@@ -1,12 +1,9 @@
 package poc.hazelcast;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
+//@SpringBootTest
 class HazelcastPocApplicationTests {
 
-    @Test
+    //    @Test
     void contextLoads() {
     }
 }

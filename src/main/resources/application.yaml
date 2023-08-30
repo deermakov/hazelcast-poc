@@ -1,5 +1,8 @@
 server.port: 8081
 
+spring:
+  cache.type: hazelcast
+
 springdoc:
   packagesToScan: poc.hazelcast.adapter.rest
   show-actuator: true

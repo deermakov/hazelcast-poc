@@ -15,15 +15,15 @@ public class HazelcastAdapter {
     private static final String DATA_OBJECT_KEY = "parties";
     private final HazelcastInstance hazelcastInstance;
 
-    public Optional<Party> getParty(String partyId){
+    public Optional<Party> getParty(String partyId) {
         return Optional.ofNullable(hazelcastInstance.<String, Party>getMap(DATA_OBJECT_KEY).get(partyId));
     }
 
-    public List<Party> getAllParties(){
-        return new ArrayList<>( hazelcastInstance.<String, Party>getMap(DATA_OBJECT_KEY).values() );
+    public List<Party> getAllParties() {
+        return new ArrayList<>(hazelcastInstance.<String, Party>getMap(DATA_OBJECT_KEY).values());
     }
 
-    public void saveParty(Party party){
+    public void saveParty(Party party) {
         hazelcastInstance.<String, Party>getMap(DATA_OBJECT_KEY).put(party.getId(), party);
     }
 }

@@ -11,7 +11,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GetAllPartiesUseCase {
     private final HazelcastAdapter hazelcastAdapter;
-    public List<Party> execute(){
+
+    public List<Party> execute() {
         return hazelcastAdapter.getAllParties();
     }
 }
